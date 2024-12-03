@@ -874,6 +874,7 @@ CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: ../src/NPCManager.cpp \
   /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
   /usr/include/c++/10/bits/fstream.tcc \
+  ../include/BattleVisitor.h \
   /usr/include/c++/10/iostream
 
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o: ../src/Observer.cpp \
@@ -1302,11 +1303,11 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
   /usr/include/c++/10/bits/fstream.tcc \
   ../include/NPC.h \
-  ../include/BattleVisitor.h \
   ../include/Observer.h \
   /usr/include/c++/10/iostream \
   ../include/NPCManager.h \
-  ../include/NPCFactory.h
+  ../include/NPCFactory.h \
+  ../include/BattleVisitor.h
 
 
 ../include/Observer.h:

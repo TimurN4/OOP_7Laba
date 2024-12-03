@@ -13,3 +13,4 @@ add_executable(BalagurFate3
     src/Observer.cpp
     src/NPCManager.cpp  # Добавьте эту строку
 )
+

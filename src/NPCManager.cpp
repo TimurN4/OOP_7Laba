@@ -32,6 +32,20 @@ void NPCManager::printNPCs() const {
     }
 }
 
+void NPCManager::startBattle(int range) {
+    BattleVisitor battleVisitor(range, npcs);
+    for (auto& npc : npcs) {
+        if (npc->getType() == "Bandit") {
+            battleVisitor.visit(dynamic_cast<Bandit&>(*npc));
+        } else if (npc->getType() == "WanderingKnight") {
+            battleVisitor.visit(dynamic_cast<WanderingKnight&>(*npc));
+        } else if (npc->getType() == "Elf") {
+            battleVisitor.visit(dynamic_cast<Elf&>(*npc));
+        }
+    }
+    battleVisitor.printKilledList();
+}
+
 std::vector<std::unique_ptr<NPC>>& NPCManager::getNPCs() {
     return npcs;
 }

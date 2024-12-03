@@ -8,6 +8,7 @@
 class Observer {
 public:
     virtual void update(const std::string& event) = 0;
+    virtual ~Observer() = default;
 };
 
 class FileObserver : public Observer {

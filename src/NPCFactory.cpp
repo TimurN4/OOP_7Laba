@@ -1,3 +1,4 @@
+// src/NPCFactory.cpp
 #include "NPCFactory.h"
 
 std::unique_ptr<NPC> NPCFactory::createNPC(const std::string& type, const std::string& name, int x, int y) {

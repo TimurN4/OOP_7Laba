@@ -11,10 +11,13 @@ public:
     std::string getName() const;
     int getX() const;
     int getY() const;
+    bool isAlive() const;
+    void setAlive(bool alive);
 
 protected:
     std::string name;
     int x, y;
+    bool alive;
 };
 
 class Bandit : public NPC {

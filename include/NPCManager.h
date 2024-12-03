@@ -6,6 +6,7 @@
 #include <string>
 #include "NPC.h"
 #include "NPCFactory.h"
+#include "BattleVisitor.h"
 
 class NPCManager {
 public:
@@ -13,6 +14,7 @@ public:
     void saveNPCs(const std::string& filename) const;
     void loadNPCs(const std::string& filename);
     void printNPCs() const;
+    void startBattle(int range);
     std::vector<std::unique_ptr<NPC>>& getNPCs();
 
 private:
