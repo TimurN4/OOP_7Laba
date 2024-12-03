@@ -1,4 +1,4 @@
-#include "NPC.h"
+#include "../include/NPC.h"
 
 NPC::NPC(const std::string& name, int x, int y) : name(name), x(x), y(y), alive(true) {}
 

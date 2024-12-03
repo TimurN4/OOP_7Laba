@@ -1,7 +1,7 @@
 CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o: \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCFactory.cpp \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPCFactory.cpp \
  /usr/include/stdc-predef.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPCFactory.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPCFactory.h \
  /usr/include/c++/10/memory /usr/include/c++/10/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
@@ -179,4 +179,4 @@ CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
  /usr/include/c++/10/bits/fstream.tcc \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPC.h
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPC.h

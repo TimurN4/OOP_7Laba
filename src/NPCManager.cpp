@@ -1,4 +1,4 @@
-#include "NPCManager.h"
+#include "../include/NPCManager.h"
 #include <fstream>
 #include <iostream>
 

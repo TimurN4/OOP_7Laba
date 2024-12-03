@@ -1,5 +1,8 @@
 #include <gtest/gtest.h>
-#include "NPC.h"
+#include "../include/NPCFactory.h"
+#include "../include/NPC.h"
+#include "../include/BattleVisitor.h"
+#include "../include/NPCManager.h"
 
 TEST(NPCTest, Constructor) {
     Bandit bandit("Bandit1", 100, 100);
@@ -15,7 +18,6 @@ TEST(NPCTest, SetAlive) {
     EXPECT_FALSE(bandit.isAlive());
 }
 
-#include "NPCFactory.h"
 
 TEST(NPCFactoryTest, CreateNPC) {
     auto bandit = NPCFactory::createNPC("Bandit", "Bandit1", 100, 100);
@@ -36,8 +38,6 @@ TEST(NPCFactoryTest, LoadNPC) {
     EXPECT_EQ(npc->getY(), 100);
 }
 
-#include "BattleVisitor.h"
-#include "NPCManager.h"
 
 TEST(BattleVisitorTest, VisitBandit) {
     NPCManager npcManager;
@@ -72,7 +72,6 @@ TEST(BattleVisitorTest, VisitElf) {
     EXPECT_FALSE(npcManager.getNPCs()[1]->isAlive());
 }
 
-#include "NPCManager.h"
 
 TEST(NPCManagerTest, AddNPC) {
     NPCManager npcManager;

@@ -25,4 +25,4 @@ public:
     void update(const std::string& event) override;
 };
 
-#endif // OBSERVER_H
+#endif 

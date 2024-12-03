@@ -1,7 +1,7 @@
 CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o: \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/BattleVisitor.cpp \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/BattleVisitor.cpp \
  /usr/include/stdc-predef.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/BattleVisitor.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/BattleVisitor.h \
  /usr/include/c++/10/vector /usr/include/c++/10/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
@@ -183,7 +183,7 @@ CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
  /usr/include/c++/10/bits/fstream.tcc \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPC.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPC.h \
  /usr/include/c++/10/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \

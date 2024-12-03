@@ -1,7 +1,7 @@
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o: \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/Observer.cpp \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/Observer.cpp \
  /usr/include/stdc-predef.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/Observer.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/Observer.h \
  /usr/include/c++/10/string \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \

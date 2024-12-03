@@ -14,8 +14,8 @@ project(googletest-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
                      "UPDATE_DISCONNECTED" "False" "URL" "https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip"
-                    SOURCE_DIR          "/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/_deps/googletest-src"
-                    BINARY_DIR          "/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/_deps/googletest-build"
+                    SOURCE_DIR          "/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/_deps/googletest-src"
+                    BINARY_DIR          "/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

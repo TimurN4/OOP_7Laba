@@ -11,4 +11,4 @@ public:
     static std::unique_ptr<NPC> loadNPC(std::ifstream& file);
 };
 
-#endif // NPCFACTORY_H
+#endif 

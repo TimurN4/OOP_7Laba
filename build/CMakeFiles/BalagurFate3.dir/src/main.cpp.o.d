@@ -1,5 +1,5 @@
 CMakeFiles/BalagurFate3.dir/src/main.cpp.o: \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/main.cpp \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/10/vector \
  /usr/include/c++/10/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
@@ -177,16 +177,16 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: \
  /usr/include/c++/10/backward/auto_ptr.h /usr/include/c++/10/bit \
  /usr/include/c++/10/pstl/glue_memory_defs.h \
  /usr/include/c++/10/pstl/execution_defs.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPC.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPCFactory.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPC.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPCFactory.h \
  /usr/include/c++/10/fstream /usr/include/c++/10/istream \
  /usr/include/c++/10/bits/istream.tcc /usr/include/c++/10/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
  /usr/include/c++/10/bits/fstream.tcc \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPC.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/Observer.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPC.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/Observer.h \
  /usr/include/c++/10/iostream \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPCManager.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPCFactory.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/BattleVisitor.h
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPCManager.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPCFactory.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/BattleVisitor.h

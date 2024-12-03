@@ -38,4 +38,4 @@ public:
     std::string getType() const override;
 };
 
-#endif // NPC_H
+#endif 

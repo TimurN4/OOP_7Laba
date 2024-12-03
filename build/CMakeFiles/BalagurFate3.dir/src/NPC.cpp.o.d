@@ -1,7 +1,7 @@
 CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o: \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPC.cpp \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPC.cpp \
  /usr/include/stdc-predef.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPC.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/../include/NPC.h \
  /usr/include/c++/10/string \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \

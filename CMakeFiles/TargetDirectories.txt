@@ -1,3 +1,0 @@
-/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/CMakeFiles/BalagurFate3.dir
-/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/CMakeFiles/edit_cache.dir
-/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/CMakeFiles/rebuild_cache.dir

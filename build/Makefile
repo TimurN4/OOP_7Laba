@@ -57,13 +57,23 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba
+CMAKE_SOURCE_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build
+CMAKE_BINARY_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -85,11 +95,56 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +172,76 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BalagurFate3
+# Target rules for targets named NPCSystemTests
 
 # Build rule for target.
-BalagurFate3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BalagurFate3
-.PHONY : BalagurFate3
+NPCSystemTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NPCSystemTests
+.PHONY : NPCSystemTests
 
 # fast build rule for target.
-BalagurFate3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/build
-.PHONY : BalagurFate3/fast
+NPCSystemTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/build
+.PHONY : NPCSystemTests/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
 src/BattleVisitor.o: src/BattleVisitor.cpp.o
 .PHONY : src/BattleVisitor.o
 
 # target to build an object file
 src/BattleVisitor.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/BattleVisitor.cpp.o
 .PHONY : src/BattleVisitor.cpp.o
 
 src/BattleVisitor.i: src/BattleVisitor.cpp.i
@@ -142,7 +249,7 @@ src/BattleVisitor.i: src/BattleVisitor.cpp.i
 
 # target to preprocess a source file
 src/BattleVisitor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/BattleVisitor.cpp.i
 .PHONY : src/BattleVisitor.cpp.i
 
 src/BattleVisitor.s: src/BattleVisitor.cpp.s
@@ -150,7 +257,7 @@ src/BattleVisitor.s: src/BattleVisitor.cpp.s
 
 # target to generate assembly for a file
 src/BattleVisitor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/BattleVisitor.cpp.s
 .PHONY : src/BattleVisitor.cpp.s
 
 src/NPC.o: src/NPC.cpp.o
@@ -158,7 +265,7 @@ src/NPC.o: src/NPC.cpp.o
 
 # target to build an object file
 src/NPC.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPC.cpp.o
 .PHONY : src/NPC.cpp.o
 
 src/NPC.i: src/NPC.cpp.i
@@ -166,7 +273,7 @@ src/NPC.i: src/NPC.cpp.i
 
 # target to preprocess a source file
 src/NPC.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPC.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPC.cpp.i
 .PHONY : src/NPC.cpp.i
 
 src/NPC.s: src/NPC.cpp.s
@@ -174,7 +281,7 @@ src/NPC.s: src/NPC.cpp.s
 
 # target to generate assembly for a file
 src/NPC.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPC.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPC.cpp.s
 .PHONY : src/NPC.cpp.s
 
 src/NPCFactory.o: src/NPCFactory.cpp.o
@@ -182,7 +289,7 @@ src/NPCFactory.o: src/NPCFactory.cpp.o
 
 # target to build an object file
 src/NPCFactory.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPCFactory.cpp.o
 .PHONY : src/NPCFactory.cpp.o
 
 src/NPCFactory.i: src/NPCFactory.cpp.i
@@ -190,7 +297,7 @@ src/NPCFactory.i: src/NPCFactory.cpp.i
 
 # target to preprocess a source file
 src/NPCFactory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPCFactory.cpp.i
 .PHONY : src/NPCFactory.cpp.i
 
 src/NPCFactory.s: src/NPCFactory.cpp.s
@@ -198,7 +305,7 @@ src/NPCFactory.s: src/NPCFactory.cpp.s
 
 # target to generate assembly for a file
 src/NPCFactory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPCFactory.cpp.s
 .PHONY : src/NPCFactory.cpp.s
 
 src/NPCManager.o: src/NPCManager.cpp.o
@@ -206,7 +313,7 @@ src/NPCManager.o: src/NPCManager.cpp.o
 
 # target to build an object file
 src/NPCManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPCManager.cpp.o
 .PHONY : src/NPCManager.cpp.o
 
 src/NPCManager.i: src/NPCManager.cpp.i
@@ -214,7 +321,7 @@ src/NPCManager.i: src/NPCManager.cpp.i
 
 # target to preprocess a source file
 src/NPCManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPCManager.cpp.i
 .PHONY : src/NPCManager.cpp.i
 
 src/NPCManager.s: src/NPCManager.cpp.s
@@ -222,7 +329,7 @@ src/NPCManager.s: src/NPCManager.cpp.s
 
 # target to generate assembly for a file
 src/NPCManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/NPCManager.cpp.s
 .PHONY : src/NPCManager.cpp.s
 
 src/Observer.o: src/Observer.cpp.o
@@ -230,7 +337,7 @@ src/Observer.o: src/Observer.cpp.o
 
 # target to build an object file
 src/Observer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/Observer.cpp.o
 .PHONY : src/Observer.cpp.o
 
 src/Observer.i: src/Observer.cpp.i
@@ -238,7 +345,7 @@ src/Observer.i: src/Observer.cpp.i
 
 # target to preprocess a source file
 src/Observer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/Observer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/Observer.cpp.i
 .PHONY : src/Observer.cpp.i
 
 src/Observer.s: src/Observer.cpp.s
@@ -246,7 +353,7 @@ src/Observer.s: src/Observer.cpp.s
 
 # target to generate assembly for a file
 src/Observer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/Observer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/Observer.cpp.s
 .PHONY : src/Observer.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -254,7 +361,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -262,7 +369,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -270,8 +377,32 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+tests/test.o: tests/test.cpp.o
+.PHONY : tests/test.o
+
+# target to build an object file
+tests/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/tests/test.cpp.o
+.PHONY : tests/test.cpp.o
+
+tests/test.i: tests/test.cpp.i
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/tests/test.cpp.i
+.PHONY : tests/test.cpp.i
+
+tests/test.s: tests/test.cpp.s
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NPCSystemTests.dir/build.make CMakeFiles/NPCSystemTests.dir/tests/test.cpp.s
+.PHONY : tests/test.cpp.s
 
 # Help Target
 help:
@@ -280,8 +411,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... BalagurFate3"
+	@echo "... test"
+	@echo "... NPCSystemTests"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... src/BattleVisitor.o"
 	@echo "... src/BattleVisitor.i"
 	@echo "... src/BattleVisitor.s"
@@ -300,6 +440,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... tests/test.o"
+	@echo "... tests/test.i"
+	@echo "... tests/test.s"
 .PHONY : help
 
 

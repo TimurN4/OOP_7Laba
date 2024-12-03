@@ -1,5 +1,4 @@
-// src/NPCFactory.cpp
-#include "NPCFactory.h"
+#include "../include/NPCFactory.h"
 
 std::unique_ptr<NPC> NPCFactory::createNPC(const std::string& type, const std::string& name, int x, int y) {
     if (type == "Bandit") return std::make_unique<Bandit>(name, x, y);

@@ -22,4 +22,4 @@ private:
     std::ofstream logFile;
 };
 
-#endif // BATTLEVISITOR_H
+#endif 

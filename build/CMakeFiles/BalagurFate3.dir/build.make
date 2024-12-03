@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba
+CMAKE_SOURCE_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build
+CMAKE_BINARY_DIR = /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BalagurFate3.dir/depend.make
@@ -72,86 +72,86 @@ include CMakeFiles/BalagurFate3.dir/flags.make
 CMakeFiles/BalagurFate3.dir/src/main.cpp.o: CMakeFiles/BalagurFate3.dir/flags.make
 CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/BalagurFate3.dir/src/main.cpp.o: CMakeFiles/BalagurFate3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BalagurFate3.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/main.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/main.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/main.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BalagurFate3.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/main.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/main.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/main.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/main.cpp
 
 CMakeFiles/BalagurFate3.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BalagurFate3.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/main.cpp > CMakeFiles/BalagurFate3.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/main.cpp > CMakeFiles/BalagurFate3.dir/src/main.cpp.i
 
 CMakeFiles/BalagurFate3.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BalagurFate3.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/main.cpp -o CMakeFiles/BalagurFate3.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/main.cpp -o CMakeFiles/BalagurFate3.dir/src/main.cpp.s
 
 CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o: CMakeFiles/BalagurFate3.dir/flags.make
 CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o: ../src/NPC.cpp
 CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o: CMakeFiles/BalagurFate3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPC.cpp
 
 CMakeFiles/BalagurFate3.dir/src/NPC.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BalagurFate3.dir/src/NPC.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPC.cpp > CMakeFiles/BalagurFate3.dir/src/NPC.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPC.cpp > CMakeFiles/BalagurFate3.dir/src/NPC.cpp.i
 
 CMakeFiles/BalagurFate3.dir/src/NPC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BalagurFate3.dir/src/NPC.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPC.cpp -o CMakeFiles/BalagurFate3.dir/src/NPC.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPC.cpp -o CMakeFiles/BalagurFate3.dir/src/NPC.cpp.s
 
 CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o: CMakeFiles/BalagurFate3.dir/flags.make
 CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o: ../src/NPCFactory.cpp
 CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o: CMakeFiles/BalagurFate3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPCFactory.cpp
 
 CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCFactory.cpp > CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPCFactory.cpp > CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.i
 
 CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCFactory.cpp -o CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPCFactory.cpp -o CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.s
 
 CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o: CMakeFiles/BalagurFate3.dir/flags.make
 CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o: ../src/BattleVisitor.cpp
 CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o: CMakeFiles/BalagurFate3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/BattleVisitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/BattleVisitor.cpp
 
 CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/BattleVisitor.cpp > CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/BattleVisitor.cpp > CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.i
 
 CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/BattleVisitor.cpp -o CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/BattleVisitor.cpp -o CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.s
 
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o: CMakeFiles/BalagurFate3.dir/flags.make
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o: ../src/Observer.cpp
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o: CMakeFiles/BalagurFate3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/Observer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/Observer.cpp
 
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BalagurFate3.dir/src/Observer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/Observer.cpp > CMakeFiles/BalagurFate3.dir/src/Observer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/Observer.cpp > CMakeFiles/BalagurFate3.dir/src/Observer.cpp.i
 
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BalagurFate3.dir/src/Observer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/Observer.cpp -o CMakeFiles/BalagurFate3.dir/src/Observer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/Observer.cpp -o CMakeFiles/BalagurFate3.dir/src/Observer.cpp.s
 
 CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: CMakeFiles/BalagurFate3.dir/flags.make
 CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: ../src/NPCManager.cpp
 CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: CMakeFiles/BalagurFate3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o -MF CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o.d -o CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o -c /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPCManager.cpp
 
 CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCManager.cpp > CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPCManager.cpp > CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.i
 
 CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCManager.cpp -o CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/src/NPCManager.cpp -o CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.s
 
 # Object files for target BalagurFate3
 BalagurFate3_OBJECTS = \
@@ -173,7 +173,7 @@ BalagurFate3: CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o
 BalagurFate3: CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o
 BalagurFate3: CMakeFiles/BalagurFate3.dir/build.make
 BalagurFate3: CMakeFiles/BalagurFate3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable BalagurFate3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable BalagurFate3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BalagurFate3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -185,6 +185,6 @@ CMakeFiles/BalagurFate3.dir/clean:
 .PHONY : CMakeFiles/BalagurFate3.dir/clean
 
 CMakeFiles/BalagurFate3.dir/depend:
-	cd /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/build/CMakeFiles/BalagurFate3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/CMakeFiles/BalagurFate3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/BalagurFate3.dir/depend
 

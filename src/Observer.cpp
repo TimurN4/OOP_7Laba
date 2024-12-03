@@ -1,4 +1,4 @@
-#include "Observer.h"
+#include "../include/Observer.h"
 
 FileObserver::FileObserver(const std::string& filename) : file(filename) {}
 
