@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BalagurFate3.dir/src/NPC.cpp.o.d"
   "CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o"
   "CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.o.d"
+  "CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o"
+  "CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o.d"
   "CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o"
   "CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o.d"
   "CMakeFiles/BalagurFate3.dir/src/main.cpp.o"

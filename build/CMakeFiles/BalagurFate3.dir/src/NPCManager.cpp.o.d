@@ -1,7 +1,8 @@
-CMakeFiles/BalagurFate3.dir/src/main.cpp.o: \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/10/vector \
- /usr/include/c++/10/bits/stl_algobase.h \
+CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/src/NPCManager.cpp \
+ /usr/include/stdc-predef.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPCManager.h \
+ /usr/include/c++/10/vector /usr/include/c++/10/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -183,10 +184,4 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: \
  /usr/include/c++/10/bits/istream.tcc /usr/include/c++/10/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
- /usr/include/c++/10/bits/fstream.tcc \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPC.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/BattleVisitor.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/Observer.h \
- /usr/include/c++/10/iostream \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPCManager.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_6Laba/include/NPCFactory.h
+ /usr/include/c++/10/bits/fstream.tcc /usr/include/c++/10/iostream

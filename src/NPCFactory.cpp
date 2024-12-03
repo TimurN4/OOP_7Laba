@@ -10,6 +10,8 @@ std::unique_ptr<NPC> NPCFactory::createNPC(const std::string& type, const std::s
 std::unique_ptr<NPC> NPCFactory::loadNPC(std::ifstream& file) {
     std::string type, name;
     int x, y;
-    file >> type >> name >> x >> y;
-    return createNPC(type, name, x, y);
+    if (file >> type >> name >> x >> y) {
+        return createNPC(type, name, x, y);
+    }
+    return nullptr;
 }

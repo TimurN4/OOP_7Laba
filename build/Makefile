@@ -201,6 +201,30 @@ src/NPCFactory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCFactory.cpp.s
 .PHONY : src/NPCFactory.cpp.s
 
+src/NPCManager.o: src/NPCManager.cpp.o
+.PHONY : src/NPCManager.o
+
+# target to build an object file
+src/NPCManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o
+.PHONY : src/NPCManager.cpp.o
+
+src/NPCManager.i: src/NPCManager.cpp.i
+.PHONY : src/NPCManager.i
+
+# target to preprocess a source file
+src/NPCManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.i
+.PHONY : src/NPCManager.cpp.i
+
+src/NPCManager.s: src/NPCManager.cpp.s
+.PHONY : src/NPCManager.s
+
+# target to generate assembly for a file
+src/NPCManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BalagurFate3.dir/build.make CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.s
+.PHONY : src/NPCManager.cpp.s
+
 src/Observer.o: src/Observer.cpp.o
 .PHONY : src/Observer.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... src/NPCFactory.o"
 	@echo "... src/NPCFactory.i"
 	@echo "... src/NPCFactory.s"
+	@echo "... src/NPCManager.o"
+	@echo "... src/NPCManager.i"
+	@echo "... src/NPCManager.s"
 	@echo "... src/Observer.o"
 	@echo "... src/Observer.i"
 	@echo "... src/Observer.s"

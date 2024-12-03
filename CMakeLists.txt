@@ -11,4 +11,5 @@ add_executable(BalagurFate3
     src/NPCFactory.cpp
     src/BattleVisitor.cpp
     src/Observer.cpp
+    src/NPCManager.cpp  # Добавьте эту строку
 )
