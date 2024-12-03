@@ -1,10 +1,10 @@
-Start testing: Dec 03 14:13 MSK
+Start testing: Dec 03 15:05 MSK
 ----------------------------------------------------------
 1/1 Testing: NPCSystemTests
 1/1 Test: NPCSystemTests
 Command: "/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build/NPCSystemTests"
 Directory: /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/build
-"NPCSystemTests" start time: Dec 03 14:13 MSK
+"NPCSystemTests" start time: Dec 03 15:05 MSK
 Output:
 ----------------------------------------------------------
 Type: Bandit, Name: Bandit1, Coords: (100, 100)
@@ -22,11 +22,11 @@ Type: Bandit, Name: Bandit1, Coords: (100, 100)
 Type: WanderingKnight, Name: Knight1, Coords: (200, 200)
 Type: Elf, Name: Elf1, Coords: (300, 300)
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"NPCSystemTests" end time: Dec 03 14:13 MSK
+"NPCSystemTests" end time: Dec 03 15:05 MSK
 "NPCSystemTests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 03 14:13 MSK
+End testing: Dec 03 15:05 MSK
