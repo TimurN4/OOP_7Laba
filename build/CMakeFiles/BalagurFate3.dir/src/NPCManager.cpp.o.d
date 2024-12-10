@@ -177,14 +177,14 @@ CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: \
  /usr/include/c++/10/bits/atomic_lockfree_defines.h \
  /usr/include/c++/10/backward/auto_ptr.h /usr/include/c++/10/bit \
  /usr/include/c++/10/pstl/glue_memory_defs.h \
- /usr/include/c++/10/pstl/execution_defs.h \
- /usr/include/c++/10/shared_mutex /usr/include/c++/10/condition_variable \
+ /usr/include/c++/10/pstl/execution_defs.h /usr/include/c++/10/thread \
  /usr/include/c++/10/chrono /usr/include/c++/10/ratio \
  /usr/include/c++/10/ctime /usr/include/c++/10/bits/parse_numbers.h \
- /usr/include/c++/10/bits/std_mutex.h \
- /usr/include/c++/10/bits/unique_lock.h /usr/include/c++/10/stop_token \
- /usr/include/c++/10/atomic /usr/include/c++/10/thread \
- /usr/include/c++/10/random /usr/include/c++/10/cmath /usr/include/math.h \
+ /usr/include/c++/10/stop_token /usr/include/c++/10/atomic \
+ /usr/include/c++/10/mutex /usr/include/c++/10/bits/std_mutex.h \
+ /usr/include/c++/10/bits/unique_lock.h /usr/include/c++/10/shared_mutex \
+ /usr/include/c++/10/condition_variable /usr/include/c++/10/random \
+ /usr/include/c++/10/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
@@ -211,10 +211,14 @@ CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: \
  /usr/include/c++/10/bits/random.tcc /usr/include/c++/10/numeric \
  /usr/include/c++/10/bits/stl_numeric.h \
  /usr/include/c++/10/pstl/glue_numeric_defs.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/src/../include/NPC.h \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/src/../include/NPCFactory.h \
- /usr/include/c++/10/fstream /usr/include/c++/10/istream \
- /usr/include/c++/10/bits/istream.tcc /usr/include/c++/10/bits/codecvt.h \
+ /usr/include/c++/10/iostream /usr/include/c++/10/istream \
+ /usr/include/c++/10/bits/istream.tcc /usr/include/c++/10/queue \
+ /usr/include/c++/10/deque /usr/include/c++/10/bits/stl_deque.h \
+ /usr/include/c++/10/bits/deque.tcc /usr/include/c++/10/bits/stl_queue.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/src/../include/../include/NPC.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/src/../include/../include/NPCFactory.h \
+ /usr/include/c++/10/fstream /usr/include/c++/10/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
- /usr/include/c++/10/bits/fstream.tcc /usr/include/c++/10/iostream
+ /usr/include/c++/10/bits/fstream.tcc \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/src/../include/../include/../include/NPC.h

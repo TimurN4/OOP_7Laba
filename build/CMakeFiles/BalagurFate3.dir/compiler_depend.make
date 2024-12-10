@@ -870,17 +870,18 @@ CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: ../src/NPCManager.cpp \
   /usr/include/c++/10/bit \
   /usr/include/c++/10/pstl/glue_memory_defs.h \
   /usr/include/c++/10/pstl/execution_defs.h \
-  /usr/include/c++/10/shared_mutex \
-  /usr/include/c++/10/condition_variable \
+  /usr/include/c++/10/thread \
   /usr/include/c++/10/chrono \
   /usr/include/c++/10/ratio \
   /usr/include/c++/10/ctime \
   /usr/include/c++/10/bits/parse_numbers.h \
-  /usr/include/c++/10/bits/std_mutex.h \
-  /usr/include/c++/10/bits/unique_lock.h \
   /usr/include/c++/10/stop_token \
   /usr/include/c++/10/atomic \
-  /usr/include/c++/10/thread \
+  /usr/include/c++/10/mutex \
+  /usr/include/c++/10/bits/std_mutex.h \
+  /usr/include/c++/10/bits/unique_lock.h \
+  /usr/include/c++/10/shared_mutex \
+  /usr/include/c++/10/condition_variable \
   /usr/include/c++/10/random \
   /usr/include/c++/10/cmath \
   /usr/include/math.h \
@@ -912,16 +913,22 @@ CMakeFiles/BalagurFate3.dir/src/NPCManager.cpp.o: ../src/NPCManager.cpp \
   /usr/include/c++/10/numeric \
   /usr/include/c++/10/bits/stl_numeric.h \
   /usr/include/c++/10/pstl/glue_numeric_defs.h \
+  /usr/include/c++/10/iostream \
+  /usr/include/c++/10/istream \
+  /usr/include/c++/10/bits/istream.tcc \
+  /usr/include/c++/10/queue \
+  /usr/include/c++/10/deque \
+  /usr/include/c++/10/bits/stl_deque.h \
+  /usr/include/c++/10/bits/deque.tcc \
+  /usr/include/c++/10/bits/stl_queue.h \
   ../include/NPC.h \
   ../include/NPCFactory.h \
   /usr/include/c++/10/fstream \
-  /usr/include/c++/10/istream \
-  /usr/include/c++/10/bits/istream.tcc \
   /usr/include/c++/10/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
   /usr/include/c++/10/bits/fstream.tcc \
-  /usr/include/c++/10/iostream
+  ../include/NPC.h
 
 CMakeFiles/BalagurFate3.dir/src/Observer.cpp.o: ../src/Observer.cpp \
   /usr/include/stdc-predef.h \
@@ -1340,17 +1347,18 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10/bit \
   /usr/include/c++/10/pstl/glue_memory_defs.h \
   /usr/include/c++/10/pstl/execution_defs.h \
-  /usr/include/c++/10/shared_mutex \
-  /usr/include/c++/10/condition_variable \
+  /usr/include/c++/10/thread \
   /usr/include/c++/10/chrono \
   /usr/include/c++/10/ratio \
   /usr/include/c++/10/ctime \
   /usr/include/c++/10/bits/parse_numbers.h \
-  /usr/include/c++/10/bits/std_mutex.h \
-  /usr/include/c++/10/bits/unique_lock.h \
   /usr/include/c++/10/stop_token \
   /usr/include/c++/10/atomic \
-  /usr/include/c++/10/thread \
+  /usr/include/c++/10/mutex \
+  /usr/include/c++/10/bits/std_mutex.h \
+  /usr/include/c++/10/bits/unique_lock.h \
+  /usr/include/c++/10/shared_mutex \
+  /usr/include/c++/10/condition_variable \
   /usr/include/c++/10/random \
   /usr/include/c++/10/cmath \
   /usr/include/math.h \
@@ -1382,18 +1390,29 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/10/numeric \
   /usr/include/c++/10/bits/stl_numeric.h \
   /usr/include/c++/10/pstl/glue_numeric_defs.h \
+  /usr/include/c++/10/iostream \
+  /usr/include/c++/10/istream \
+  /usr/include/c++/10/bits/istream.tcc \
+  /usr/include/c++/10/queue \
+  /usr/include/c++/10/deque \
+  /usr/include/c++/10/bits/stl_deque.h \
+  /usr/include/c++/10/bits/deque.tcc \
+  /usr/include/c++/10/bits/stl_queue.h \
   ../include/NPC.h \
   ../include/NPCFactory.h \
   /usr/include/c++/10/fstream \
-  /usr/include/c++/10/istream \
-  /usr/include/c++/10/bits/istream.tcc \
   /usr/include/c++/10/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
-  /usr/include/c++/10/bits/fstream.tcc
+  /usr/include/c++/10/bits/fstream.tcc \
+  ../include/NPC.h
 
 
 ../include/Observer.h:
+
+/usr/include/c++/10/deque:
+
+/usr/include/c++/10/queue:
 
 /usr/include/c++/10/pstl/glue_numeric_defs.h:
 
@@ -1407,15 +1426,17 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/random:
 
-/usr/include/c++/10/stop_token:
+/usr/include/c++/10/condition_variable:
 
 /usr/include/c++/10/bits/unique_lock.h:
+
+/usr/include/c++/10/mutex:
+
+/usr/include/c++/10/stop_token:
 
 /usr/include/c++/10/ctime:
 
 /usr/include/c++/10/ratio:
-
-/usr/include/c++/10/condition_variable:
 
 /usr/include/c++/10/clocale:
 
@@ -1432,6 +1453,8 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/10/bits/enable_special_members.h:
+
+/usr/include/c++/10/bits/stl_deque.h:
 
 /usr/include/c++/10/bits/postypes.h:
 
@@ -1681,6 +1704,8 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp \
 
 /usr/include/c++/10/new:
 
+/usr/include/c++/10/bits/deque.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -1856,6 +1881,8 @@ CMakeFiles/BalagurFate3.dir/src/main.cpp.o: ../src/main.cpp \
 /usr/include/c++/10/ranges:
 
 /usr/include/c++/10/ext/aligned_buffer.h:
+
+/usr/include/c++/10/bits/stl_queue.h:
 
 /usr/include/c++/10/bits/invoke.h:
 

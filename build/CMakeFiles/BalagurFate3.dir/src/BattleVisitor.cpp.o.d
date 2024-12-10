@@ -183,7 +183,7 @@ CMakeFiles/BalagurFate3.dir/src/BattleVisitor.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
  /usr/include/c++/10/bits/fstream.tcc \
- /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/src/../include/NPC.h \
+ /home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/src/../include/../include/NPC.h \
  /usr/include/c++/10/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \

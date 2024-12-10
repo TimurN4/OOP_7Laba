@@ -1,10 +1,18 @@
 #include "../include/NPCManager.h"
 
 NPCManager::NPCManager() : running(true) {
+    initializeNPCs(); // Создаем 50 NPC в случайных локациях
+}
+
+NPCManager::~NPCManager() {
+    stopGame();
+}
+
+void NPCManager::initializeNPCs() {
     // Создаем 50 NPC в случайных локациях
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(0, 100);
+    std::uniform_int_distribution<> dis(0, MAP_WIDTH);
     std::uniform_int_distribution<> typeDis(0, 2);
 
     for (int i = 0; i < 50; ++i) {
@@ -18,30 +26,24 @@ NPCManager::NPCManager() : running(true) {
     }
 }
 
-NPCManager::~NPCManager() {
-    running = false;
-    if (moveThread.joinable()) moveThread.join();
-    if (battleThread.joinable()) battleThread.join();
-    if (printThread.joinable()) printThread.join();
-}
-
 void NPCManager::addNPC(const std::string& type, const std::string& name, int x, int y) {
-    if (x < 0 || x > 100 || y < 0 || y > 100) {
-        std::cerr << "Coordinates out of range (0 <= x, y <= 100)" << std::endl;
+    if (x < 0 || x > MAP_WIDTH || y < 0 || y > MAP_HEIGHT) {
+        std::cerr << "Coordinates out of range (0 <= x, y <= " << MAP_WIDTH << ")" << std::endl;
         return;
     }
-    std::unique_lock<std::shared_mutex> lock(npcsMutex); // Используем unique_lock для записи
+    std::unique_lock<std::shared_mutex> lock(npcsMutex);
     npcs.push_back(NPCFactory::createNPC(type, name, x, y));
 }
 
 void NPCManager::moveNPCs() {
     while (running) {
-        std::shared_lock<std::shared_mutex> lock(npcsMutex); // Используем shared_lock для чтения
+        std::shared_lock<std::shared_mutex> lock(npcsMutex);
         for (auto& npc : npcs) {
-            if (npc->isAlive()) {
+            if (npc->isAlive()) { // Передвигаем только живых NPC
                 moveNPC(*npc);
             }
         }
+        checkForBattles(); // Проверяем расстояние убийства
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
 }
@@ -49,61 +51,81 @@ void NPCManager::moveNPCs() {
 void NPCManager::moveNPC(NPC& npc) {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(-5, 5);
+    std::uniform_int_distribution<> dis(-npc.getMoveDistance(), npc.getMoveDistance());
 
     int dx = dis(gen);
     int dy = dis(gen);
     int newX = npc.getX() + dx;
     int newY = npc.getY() + dy;
 
-    if (newX >= 0 && newX <= 100 && newY >= 0 && newY <= 100) {
+    // Проверяем, что NPC не покидает карту
+    if (newX >= 0 && newX <= MAP_WIDTH && newY >= 0 && newY <= MAP_HEIGHT) {
         npc.setX(newX);
         npc.setY(newY);
     }
 }
 
-void NPCManager::battleNPCs() {
-    while (running) {
-        std::shared_lock<std::shared_mutex> lock(npcsMutex); // Используем shared_lock для чтения
-        for (auto& attacker : npcs) {
-            if (attacker->isAlive()) {
-                for (auto& defender : npcs) {
-                    if (defender->isAlive() && attacker != defender) {
-                        double distance = std::sqrt(std::pow(attacker->getX() - defender->getX(), 2) + std::pow(attacker->getY() - defender->getY(), 2));
-                        if (distance <= 10) { // Расстояние убийства
-                            battle(*attacker, *defender);
-                        }
+void NPCManager::checkForBattles() {
+    std::shared_lock<std::shared_mutex> lock(npcsMutex);
+    for (auto& attacker : npcs) {
+        if (attacker->isAlive()) {
+            for (auto& defender : npcs) {
+                if (defender->isAlive() && attacker != defender) {
+                    double distance = std::sqrt(std::pow(attacker->getX() - defender->getX(), 2) + std::pow(attacker->getY() - defender->getY(), 2));
+                    if (distance <= attacker->getKillDistance()) {
+                        std::lock_guard<std::mutex> battleLock(battleQueueMutex);
+                        battleQueue.push({attacker.get(), defender.get()}); // Добавляем задачу в очередь
+                        battleQueueCV.notify_one(); // Уведомляем поток боев
                     }
                 }
             }
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    }
+}
+
+void NPCManager::battleNPCs() {
+    while (running) {
+        std::unique_lock<std::mutex> battleLock(battleQueueMutex);
+        battleQueueCV.wait(battleLock, [this] { return !battleQueue.empty() || !running; });
+
+        if (!running && battleQueue.empty()) break;
+
+        auto [attacker, defender] = battleQueue.front();
+        battleQueue.pop();
+        battleLock.unlock();
+
+        battle(*attacker, *defender);
     }
 }
 
 void NPCManager::battle(NPC& attacker, NPC& defender) {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 6);
+    std::uniform_int_distribution<> dis(1, 6); // Генерация случайных чисел от 1 до 6
 
-    int attack = dis(gen);
-    int defense = dis(gen);
+    int attack = dis(gen); // Сила атаки
+    int defense = dis(gen); // Сила защиты
+
+    std::lock_guard<std::mutex> coutLock(coutMutex);
+    std::cout << attacker.getName() << " attacks with strength " << attack << ", "
+              << defender.getName() << " defends with strength " << defense << std::endl;
 
     if (attack > defense) {
-        std::unique_lock<std::shared_mutex> lock(npcsMutex); // Используем unique_lock для записи
+        std::unique_lock<std::shared_mutex> lock(npcsMutex);
         defender.setAlive(false);
-        std::lock_guard<std::mutex> coutLock(coutMutex); // Используем lock_guard для std::cout
         std::cout << attacker.getName() << " killed " << defender.getName() << std::endl;
+    } else {
+        std::cout << defender.getName() << " survived the attack!" << std::endl;
     }
 }
 
 void NPCManager::printMap() const {
     while (running) {
-        std::shared_lock<std::shared_mutex> lock(npcsMutex); // Используем shared_lock для чтения
-        std::lock_guard<std::mutex> coutLock(coutMutex); // Используем lock_guard для std::cout
+        std::shared_lock<std::shared_mutex> lock(npcsMutex);
+        std::lock_guard<std::mutex> coutLock(coutMutex);
         std::cout << "Map:" << std::endl;
         for (const auto& npc : npcs) {
-            if (npc->isAlive()) {
+            if (npc->isAlive()) { // Отображаем только живых NPC
                 std::cout << "Type: " << npc->getType() << ", Name: " << npc->getName() << ", Coords: (" << npc->getX() << ", " << npc->getY() << ")" << std::endl;
             }
         }
@@ -115,4 +137,23 @@ void NPCManager::runThreads() {
     moveThread = std::thread(&NPCManager::moveNPCs, this);
     battleThread = std::thread(&NPCManager::battleNPCs, this);
     printThread = std::thread(&NPCManager::printMap, this);
+}
+
+void NPCManager::stopGame() {
+    running = false;
+    battleQueueCV.notify_all(); // Уведомляем поток боев о завершении
+    if (moveThread.joinable()) moveThread.join();
+    if (battleThread.joinable()) battleThread.join();
+    if (printThread.joinable()) printThread.join();
+}
+
+void NPCManager::printSurvivors() const {
+    std::shared_lock<std::shared_mutex> lock(npcsMutex);
+    std::lock_guard<std::mutex> coutLock(coutMutex);
+    std::cout << "Survivors:" << std::endl;
+    for (const auto& npc : npcs) {
+        if (npc->isAlive()) {
+            std::cout << "Type: " << npc->getType() << ", Name: " << npc->getName() << ", Coords: (" << npc->getX() << ", " << npc->getY() << ")" << std::endl;
+        }
+    }
 }
