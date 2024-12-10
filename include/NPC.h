@@ -13,6 +13,8 @@ public:
     int getY() const;
     bool isAlive() const;
     void setAlive(bool alive);
+    void setX(int x);
+    void setY(int y);
 
 protected:
     std::string name;
@@ -38,4 +40,4 @@ public:
     std::string getType() const override;
 };
 
-#endif 
+#endif

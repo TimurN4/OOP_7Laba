@@ -5,7 +5,7 @@
 #include <memory>
 #include <string>
 #include <fstream>
-#include "NPC.h"
+#include "../include/NPC.h"
 
 class BattleVisitor {
 public:

@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <fstream>
-#include "NPC.h"
+#include "../include/NPC.h"
 
 class NPCFactory {
 public:
@@ -11,4 +11,4 @@ public:
     static std::unique_ptr<NPC> loadNPC(std::ifstream& file);
 };
 
-#endif 
+#endif

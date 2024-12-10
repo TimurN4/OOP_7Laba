@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_66Laba/include
+CXX_INCLUDES = -I/home/timurnogaev/unix-shell-and-utils-TimurN4/OOP_7Laba/include
 
 CXX_FLAGS = -std=gnu++2a
 
