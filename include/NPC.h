@@ -16,7 +16,6 @@ public:
     void setX(int x);
     void setY(int y);
 
-    // Новые методы для расстояния хода и убийства
     virtual int getMoveDistance() const = 0;
     virtual int getKillDistance() const = 0;
 

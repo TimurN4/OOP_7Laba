@@ -1,7 +1,7 @@
 #include "../include/NPCManager.h"
 
 NPCManager::NPCManager() : running(true) {
-    initializeNPCs(); // Создаем 50 NPC в случайных локациях
+    initializeNPCs();
 }
 
 NPCManager::~NPCManager() {
@@ -9,7 +9,6 @@ NPCManager::~NPCManager() {
 }
 
 void NPCManager::initializeNPCs() {
-    // Создаем 50 NPC в случайных локациях
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, MAP_WIDTH);
@@ -39,11 +38,11 @@ void NPCManager::moveNPCs() {
     while (running) {
         std::shared_lock<std::shared_mutex> lock(npcsMutex);
         for (auto& npc : npcs) {
-            if (npc->isAlive()) { // Передвигаем только живых NPC
+            if (npc->isAlive()) { 
                 moveNPC(*npc);
             }
         }
-        checkForBattles(); // Проверяем расстояние убийства
+        checkForBattles(); 
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
 }
@@ -58,7 +57,6 @@ void NPCManager::moveNPC(NPC& npc) {
     int newX = npc.getX() + dx;
     int newY = npc.getY() + dy;
 
-    // Проверяем, что NPC не покидает карту
     if (newX >= 0 && newX <= MAP_WIDTH && newY >= 0 && newY <= MAP_HEIGHT) {
         npc.setX(newX);
         npc.setY(newY);
@@ -74,8 +72,8 @@ void NPCManager::checkForBattles() {
                     double distance = std::sqrt(std::pow(attacker->getX() - defender->getX(), 2) + std::pow(attacker->getY() - defender->getY(), 2));
                     if (distance <= attacker->getKillDistance()) {
                         std::lock_guard<std::mutex> battleLock(battleQueueMutex);
-                        battleQueue.push({attacker.get(), defender.get()}); // Добавляем задачу в очередь
-                        battleQueueCV.notify_one(); // Уведомляем поток боев
+                        battleQueue.push({attacker.get(), defender.get()}); 
+                        battleQueueCV.notify_one(); 
                     }
                 }
             }
@@ -101,10 +99,10 @@ void NPCManager::battleNPCs() {
 void NPCManager::battle(NPC& attacker, NPC& defender) {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 6); // Генерация случайных чисел от 1 до 6
+    std::uniform_int_distribution<> dis(1, 6); 
 
-    int attack = dis(gen); // Сила атаки
-    int defense = dis(gen); // Сила защиты
+    int attack = dis(gen); 
+    int defense = dis(gen); 
 
     std::lock_guard<std::mutex> coutLock(coutMutex);
     std::cout << attacker.getName() << " attacks with strength " << attack << ", "
@@ -125,7 +123,7 @@ void NPCManager::printMap() const {
         std::lock_guard<std::mutex> coutLock(coutMutex);
         std::cout << "Map:" << std::endl;
         for (const auto& npc : npcs) {
-            if (npc->isAlive()) { // Отображаем только живых NPC
+            if (npc->isAlive()) {
                 std::cout << "Type: " << npc->getType() << ", Name: " << npc->getName() << ", Coords: (" << npc->getX() << ", " << npc->getY() << ")" << std::endl;
             }
         }
@@ -141,7 +139,7 @@ void NPCManager::runThreads() {
 
 void NPCManager::stopGame() {
     running = false;
-    battleQueueCV.notify_all(); // Уведомляем поток боев о завершении
+    battleQueueCV.notify_all(); 
     if (moveThread.joinable()) moveThread.join();
     if (battleThread.joinable()) battleThread.join();
     if (printThread.joinable()) printThread.join();

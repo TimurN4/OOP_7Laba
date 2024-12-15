@@ -31,19 +31,17 @@ public:
 
 private:
     std::vector<std::unique_ptr<NPC>> npcs;
-    mutable std::shared_mutex npcsMutex; // Для управления доступом к npcs
-    mutable std::mutex coutMutex; // Для управления доступом к std::cout
+    mutable std::shared_mutex npcsMutex; 
+    mutable std::mutex coutMutex; 
     std::thread moveThread;
     std::thread battleThread;
     std::thread printThread;
     bool running;
 
-    // Очередь задач для боев
     std::queue<std::pair<NPC*, NPC*>> battleQueue;
     std::mutex battleQueueMutex;
     std::condition_variable battleQueueCV;
 
-    // Константы для размера карты
     static constexpr int MAP_WIDTH = 100;
     static constexpr int MAP_HEIGHT = 100;
 
